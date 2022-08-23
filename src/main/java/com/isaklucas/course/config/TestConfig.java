@@ -86,11 +86,13 @@ public class TestConfig implements CommandLineRunner {
 		
 		Payment pay1 = new Payment(null, Instant.parse("2019-07-22T03:42:10Z"), o2 );
 		Payment pay2 = new Payment(null, Instant.parse("2019-07-22T03:42:10Z"), o3 );
+		Payment pay3 = new Payment(null, Instant.parse("2019-07-22T03:42:10Z"), o1 );
 		
 		o2.setPayment(pay1);
 		o3.setPayment(pay2);
+		o1.setPayment(pay3);
 		
-		orderRepository.saveAll(Arrays.asList(o2,o3));
+		orderRepository.saveAll(Arrays.asList(o2,o3, o1));
 	}
 	
 	
